@@ -69,17 +69,13 @@ const Home: React.FC = ({ navigation }: any) => {
         }
     }))
 
-
-    // const [data, setData] = useState<any>(new DataProvider((r1, r2) => r1.id !== r2.id).cloneWithRows(tempData))
     const data = new DataProvider((r1, r2) => r1.id !== r2.id).cloneWithRows(tempData)
-    // const [data, setData] = useState<any>(new DataProvider((r1, r2) => r1.id !== r2.id, (index) => 'id:' + index))
-    console.log('initial tempdata =>', tempData)
+
     const generateUser = async () => {
 
         let userData: any = [];
 
         for (var i = 0; i < 30; i++) {
-            console.log('value of i =>', i)
             userData = [...userData, {
                 id: `${faker.datatype.number()}`,
                 name: faker.name.firstName(),
@@ -89,19 +85,16 @@ const Home: React.FC = ({ navigation }: any) => {
         }
         setTempData(prev => [...prev, ...userData])
     }
+    console.log(tempData.length)
 
-    console.log('tempisdsds =>', tempData)
-    const endReached = () => {
-
-        generateUser()
-    }
+    const endReached = () => generateUser()
 
     // rendering stories view
-    const renderItem = ({ item }: any) => {
+    const renderItem = (item: any, data: any) => {
         return (
             <View style={styles.mainViewStyle}>
                 <CProfileBttn
-                    id={item.id} user_name={item.name} uri={item.profile_pic}
+                    id={data.id} user_name={data.name} uri={data.profile_pic}
                     onPress={(data: any) => console.log(data)}
                 />
             </View>
@@ -127,29 +120,18 @@ const Home: React.FC = ({ navigation }: any) => {
             {/* stories scrollbar recycler view */}
 
 
-            {/* <ScrollView> */}
-            {/* <RecyclerListView
-                    dataProvider={data}
-                    rowRenderer={renderItem}
-                    layoutProvider={layoutProvider}
-                    isHorizontal={true}
-                    style={{ maxHeight: Dimensions.get('screen').height / 4 - (105), }}
-                    onEndReached={endReached}
-                    onEndReachedThreshold={0.5}
-                    scrollViewProps={{ showsHorizontalScrollIndicator: false }}
-                    renderFooter={() => <View style={{ justifyContent: 'center', height: 80 }}><ActivityIndicator size={'large'} color={colors.colors.white} style={{ marginHorizontal: 10 }} /></View>}
-                    forceNonDeterministicRendering={true}
-                /> */}
-
-            {/* <FlatList
-                    data={tempData}
-                    renderItem={renderItem}
-                    horizontal={true}
-                    onEndReached={endReached}
-                    onEndReachedThreshold={.001}
-                    getItemLayout={(data, index) => ({ length: Dimensions.get('screen').height - (44 + 105), offset: Dimensions.get('screen').height - (44 + 105) * index, index })}
-                /> */}
-
+            <RecyclerListView
+                dataProvider={data}
+                rowRenderer={renderItem}
+                layoutProvider={layoutProvider}
+                isHorizontal={true}
+                style={{ maxHeight: Dimensions.get('screen').height / 4 - (105), }}
+                onEndReached={endReached}
+                onEndReachedThreshold={0.5}
+                scrollViewProps={{ showsHorizontalScrollIndicator: false }}
+                renderFooter={() => <View style={{ justifyContent: 'center', height: 80 }}><ActivityIndicator size={'large'} color={colors.colors.white} style={{ marginHorizontal: 10 }} /></View>}
+                forceNonDeterministicRendering={true}
+            />
 
             {/* feed scrollbar recycler view */}
             <RecyclerListView
@@ -165,7 +147,7 @@ const Home: React.FC = ({ navigation }: any) => {
                     showsVerticalScrollIndicator: false,
                 }}
             />
-            {/* </ScrollView> */}
+
 
 
             {/* </ScrollView> */}
