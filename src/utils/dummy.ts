@@ -1,0 +1,18 @@
+export const user_data = [
+    { id: '1', name: 'Jack', profile_pic: 'https://c4.wallpaperflare.com/wallpaper/250/815/774/digital-art-skull-red-background-teeth-wallpaper-preview.jpg' },
+    { id: '2', name: 'Jack', profile_pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWdx7hs6Nf4dKbD7j4eKb4FXEcIRM5Px3QgQ&usqp=CAU' },
+    { id: '3', name: 'Jack', profile_pic: 'https://2.bp.blogspot.com/-XUyvkMiDBAs/W7FrFiqiJsI/AAAAAAAADIw/HOj9gjgFxIoEk9PG5e06JQbNBwLWF9ekwCLcBGAs/s1600/abstract274_uhd.jpg' },
+    { id: '4', name: 'Jack', profile_pic: 'https://wallpapercave.com/wp/wp8953922.jpg' },
+    { id: '5', name: 'Jack', profile_pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI30TWVTzPUb-RemyRCAkN0K4zBfIpyAofkA&usqp=CAU' },
+    { id: '6', name: 'Jack', profile_pic: 'https://wallpaperaccess.com/full/1369012.jpg' },
+    { id: '7', name: 'Jack', profile_pic: 'https://www.sony-asia.com/image/bc6d25fa6371c2899ce704a2bed7614c?fmt=png-alpha&wid=960' },
+    { id: '8', name: 'Jack', profile_pic: 'https://wallpaperaccess.com/full/508751.jpg' },
+    { id: '9', name: 'Jack', profile_pic: 'https://images.pexels.com/photos/1525041/pexels-photo-1525041.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' },
+    { id: '10', name: 'Jack', profile_pic: 'https://wallpapercave.com/wp/wp5633980.jpg' },
+    { id: '11', name: 'Jack', profile_pic: 'https://cdn.wallpapersafari.com/47/55/Sg5pZF.jpg' },
+    { id: '12', name: 'Jack', profile_pic: 'https://wallpaperaccess.com/full/685208.jpg' },
+    { id: '13', name: 'Jack', profile_pic: 'https://wallpapercave.com/wp/wp4600617.jpg' },
+    { id: '14', name: 'Jack', profile_pic: 'https://images.pexels.com/photos/1643409/pexels-photo-1643409.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' },
+    { id: '15', name: 'Jack', profile_pic: 'https://t3.ftcdn.net/jpg/03/17/21/94/360_F_317219421_P8SmLPcqLYQERb3bcctIQD9grBU5wbYC.jpg' },
+    { id: '16', name: 'Jack', profile_pic: 'https://wallpapercave.com/wp/wp5984922.jpg' },
+]
